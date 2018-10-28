@@ -14,9 +14,14 @@ function openNavMenu() {
 }
 
 function closeNavMenu() {
-  navMenu.classList.add('hidden','nav-animation-close');
-  navMenu.classList.remove('nav','nav-animation-open');
-  openMenu.classList.remove('hidden');
+  navMenu.classList.add('nav-animation-close');
+  navMenu.classList.remove('nav-animation-open');
+  setTimeout(function addHidden() {
+    navMenu.classList.add('hidden')
+  }, 1000);
+  setTimeout(function addHidden() {
+    navMenu.classList.remove('nav')
+  }, 3000);
 }
 
 openMenu.addEventListener('click', openNavMenu);

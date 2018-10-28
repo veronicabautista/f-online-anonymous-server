@@ -1,2 +1,4 @@
-# clarke-fc-anonymous-server
-Base para la prueba técnica 4 de la formación continua en Adalab
+-- Anonymous Server --
+
+Ejercicio centrado en la realización de una página con botón de menú desplegable.
+- 

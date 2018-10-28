@@ -14,6 +14,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-y: hidden;
+  overflow-x: hidden;
   position: relative;
 }
 .page {
@@ -55,9 +56,8 @@ body {
   display: block;
 }
 .nav-trigger:hover {
-  border: 2px white;
+  border: 1px solid white;
 }
-
 
 
 /* MENU */
@@ -71,7 +71,7 @@ body {
 }
 @keyframes closeNav {
   from {
-    transform:translateX(0);
+    transform: translateX(0);
   }
   to {
     transform: translateX(100%);
@@ -88,6 +88,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
  }
  .nav-animation-open {
   animation-name: openNav;
@@ -95,12 +96,11 @@ body {
 }
 .nav-animation-close {
   animation-name: closeNav;
-  animation-duration: 2s;
+  animation-duration: 3s;
 }
 .nav__items {
   width: 100%;
 }
-
 .nav__item {
   list-style: none;
   text-align: center;
@@ -124,15 +124,15 @@ body {
   top: 0;
   right: 0;
 }
-
-
-
+.nav-close:hover {
+border: 1px solid white;
+}
 
 /* MAIN */
 .page__main {
   height: 100vh;
   max-width: 990px;
-  margin: 60px;
+  
   font-family: 'Roboto Slab', serif;
   display: flex;
   align-items: center;
@@ -142,15 +142,14 @@ body {
 }
 .page__wrapper {
   width: 700px;
+  margin: 0 60px 0 60px;
+
 }
 .page__main-title {
   text-align: left;
   text-transform: uppercase;
   font-size: 80px;
 }
-
-
-
 
 /* FOOTER */
 .page__footer {
@@ -166,4 +165,21 @@ body {
   background-color: black;
   padding: 5px;
   border-radius: 10px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .nav__link {
+    font-size: 30px;
+  }
+  .page__main {
+    margin: 30px;
+    max-width: 550px;
+  }
+  .page__main-title {
+    font-size: 60px;
+    max-width: 550px;
+  }
+  .page__wrapper {
+    max-width: 550px;
+  }
 }
