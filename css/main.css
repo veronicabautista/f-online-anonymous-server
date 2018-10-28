@@ -54,6 +54,7 @@ body {
   right: 0;
   position: fixed;
   display: block;
+  margin: 15px;
 }
 .nav-trigger:hover {
   border: 1px solid white;
@@ -123,6 +124,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+  margin: 15px;
 }
 .nav-close:hover {
 border: 1px solid white;
@@ -155,16 +157,17 @@ border: 1px solid white;
 .page__footer {
   position: fixed; 
   bottom: 0;
-  font-family: 'Arial', sans-serif;  
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 10px; 
 }
 .page__footer-copy {
-  color: grey;
+  color: white;
   text-align: center;
   font-size: 12px;
-  opacity: 0.5;
-  background-color: black;
+  background-color: grey;
+  opacity: 0.4;
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
@@ -181,5 +184,7 @@ border: 1px solid white;
   }
   .page__wrapper {
     max-width: 550px;
+    margin: 0 60px 0 60px;
   }
+
 }
