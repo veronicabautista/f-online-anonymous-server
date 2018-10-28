@@ -7,6 +7,9 @@ a:link, a:hover, a:visited, a:active {
   text-decoration: none;
   color: white;
 }
+.hidden {
+  display: none;
+}
 body {
   margin: 0;
   padding: 0;
@@ -51,11 +54,29 @@ body {
   position: fixed;
   display: block;
 }
-
+.nav-trigger:hover {
+  border: 2px white;
+}
 
 
 
 /* MENU */
+@keyframes openNav {
+  from {
+      transform: translateX(100%);;
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+@keyframes closeNav {
+  from {
+    transform:translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
 .nav {
   background-color: #402929;
   opacity: 0.9;
@@ -68,12 +89,24 @@ body {
   align-items: center;
   justify-content: center;
  }
+ .nav-animation-open {
+  animation-name: openNav;
+  animation-duration: 2s;
+}
+.nav-animation-close {
+  animation-name: closeNav;
+  animation-duration: 2s;
+}
 .nav__items {
   width: 100%;
 }
+
 .nav__item {
   list-style: none;
   text-align: center;
+}
+.nav__item:hover {
+  transform: scale(1.2);
 }
 .nav__link {
   font-size: 50px;
